@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "217931694578",
+    "project_id": "erendemirelcom",
+    "storage_bucket": "erendemirelcom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217931694578:android:77a3fff1d4633c25a3ab6b",
+        "android_client_info": {
+          "package_name": "com.example.my_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217931694578-2nfn2e3dvc6q11hkj0bml52t6oahfjb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlibFksGZJQ5Ps36bRRh12rO-oGaE0qus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217931694578-2nfn2e3dvc6q11hkj0bml52t6oahfjb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
