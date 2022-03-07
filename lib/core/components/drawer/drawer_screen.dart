@@ -37,36 +37,41 @@ class CvDrawer extends StatelessWidget {
                   BasicDetailsContainer(
                     name: snapshot.data!.docs[0]['name'],
                     title: snapshot.data!.docs[0]["title"],
+                    image: snapshot.data!.docs[0]["image"],
                   ),
                   context.emptySizedHeightBoxLow3x,
-                  const PersonalInfoContainer(),
+                  PersonalInfoContainer(
+                      personalInfoArea: snapshot.data!.docs[0]
+                          ["personalInfoArea"]),
                   Divider(
                     thickness: 0.1,
                     color: context.colorScheme.onBackground,
                   ),
                   context.emptySizedHeightBoxLow,
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: context.horizontalPaddingNormal,
                     child: Text(
-                      'Skills',
+                      'Skills:',
                       style: context.textTheme.headline6,
                     ),
                   ),
                   context.emptySizedHeightBoxLow3x,
-                  const SkillsList(),
+                  SkillsList(skills: snapshot.data!.docs[0]["skills"]),
                   Divider(
                     thickness: 0.1,
                     color: context.colorScheme.onBackground,
                   ),
+                  context.emptySizedHeightBoxLow,
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: context.horizontalPaddingNormal,
                     child: Text(
-                      'Coding',
+                      'Coding:',
                       style: context.textTheme.headline6,
                     ),
                   ),
                   context.emptySizedHeightBoxLow,
-                  const CodingSkills(),
+                  CodingSkills(
+                      codingSkills: snapshot.data!.docs[0]["codingSkills"]),
                 ],
               );
             },

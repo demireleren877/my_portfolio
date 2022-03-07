@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
-import '../../../core/colors/colors.dart';
-import '../../../core/data/personal_data.dart';
+import '../../colors/colors.dart';
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
-  const AnimatedLinearProgressIndicator({Key? key, required this.index})
-      : super(key: key);
+  const AnimatedLinearProgressIndicator({
+    Key? key,
+    required this.codingSkills,
+    required this.index,
+  }) : super(key: key);
 
+  final Map<String, dynamic> codingSkills;
   final int index;
 
   @override
@@ -17,7 +20,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
       child: TweenAnimationBuilder(
         tween: Tween<double>(
           begin: 0,
-          end: PersonalData.codingSkills[index].skillPercent,
+          end: codingSkills.entries.elementAt(index).value,
         ),
         duration: const Duration(milliseconds: 500),
         builder: (context, double value, child) {
@@ -27,7 +30,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    PersonalData.codingSkills[index].skillName,
+                    codingSkills.keys.elementAt(index),
                     style: context.textTheme.subtitle1,
                   ),
                   Text(

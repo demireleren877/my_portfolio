@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawerEnableOpenDragGesture: false,
       appBar: !Responsive.isDesktop(context) ? AppBar() : null,
       drawer: const CvDrawer(),
       body: Column(

@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
 
 import '../../../core/colors/colors.dart';
-import '../../../core/data/personal_data.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   const AnimatedCircularProgressIndicator({
     Key? key,
+    required this.skills,
     required this.index,
   }) : super(key: key);
 
+  final Map<String, dynamic> skills;
   final int index;
 
   @override
@@ -20,7 +21,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
         TweenAnimationBuilder(
           tween: Tween<double>(
             begin: 0,
-            end: PersonalData.skills[index].skillPercent,
+            end: skills.entries.elementAt(index).value,
           ),
           duration: const Duration(milliseconds: 500),
           builder: (context, double value, child) {
@@ -55,7 +56,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
         ),
         context.emptySizedHeightBoxLow3x,
         Text(
-          PersonalData.skills[index].skillName,
+          skills.keys.elementAt(index),
           style: context.textTheme.subtitle1,
         ),
       ],

@@ -19,7 +19,7 @@ class AnimatedTexts extends StatelessWidget {
       child: SizedBox(
         width: Responsive.isMobile(context)
             ? context.dynamicWidth(0.8)
-            : context.dynamicWidth(0.4),
+            : context.dynamicWidth(0.3),
         child: AnimatedTextKit(
           repeatForever: true,
           animatedTexts: [

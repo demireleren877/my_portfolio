@@ -9,10 +9,12 @@ class BasicDetailsContainer extends StatelessWidget {
     Key? key,
     required this.name,
     required this.title,
+    required this.image,
   }) : super(key: key);
 
   final String name;
   final String title;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,8 @@ class BasicDetailsContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CircleAvatar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            backgroundImage: NetworkImage(image),
             radius: context.dynamicHeight(0.07),
           ),
           Text(

@@ -14,9 +14,7 @@ class PersonalInfoText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(minWidth: 200.h),
-      padding: EdgeInsets.symmetric(
-        horizontal: 25.w,
-      ),
+      padding: context.horizontalPaddingLow,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

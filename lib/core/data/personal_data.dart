@@ -1,10 +1,4 @@
 class PersonalData {
-  static Map<String, String> personalInfos = {
-    'Country:': 'Turkey',
-    'City:': 'Istanbul',
-    'Age:': '21',
-  };
-
   static List<SkillModel> codingSkills = [
     SkillModel(skillPercent: .65, skillName: 'Dart'),
     SkillModel(skillPercent: .70, skillName: 'C# Programming'),
