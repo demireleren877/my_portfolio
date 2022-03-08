@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:kartal/kartal.dart';
 import 'package:my_portfolio/core/components/centered_progress/centered_progress.dart';
+import 'package:my_portfolio/core/services/firebase_services.dart';
 
 import 'basic_details.dart';
 import 'coding_skills.dart';
@@ -23,9 +24,7 @@ class CvDrawer extends StatelessWidget {
         child: Padding(
           padding: context.paddingLow,
           child: StreamBuilder<QuerySnapshot>(
-            stream: FirebaseFirestore.instance
-                .collection('personal_info')
-                .snapshots(),
+            stream: FirebaseService.personal_info.snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return const CenteredProgressIndicator();
