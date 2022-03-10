@@ -24,7 +24,7 @@ class CvDrawer extends StatelessWidget {
         child: Padding(
           padding: context.paddingLow,
           child: StreamBuilder<QuerySnapshot>(
-            stream: FirebaseService.personal_info.snapshots(),
+            stream: FirebaseService.personalInfo.snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) {
                 return const CenteredProgressIndicator();

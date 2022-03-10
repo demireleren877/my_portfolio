@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'package:kartal/kartal.dart';
@@ -11,7 +12,9 @@ import 'header_title.dart';
 class HeaderContainer extends StatelessWidget {
   const HeaderContainer({
     Key? key,
+    required this.snapshot,
   }) : super(key: key);
+  final AsyncSnapshot<QuerySnapshot<Object?>> snapshot;
 
   @override
   Widget build(BuildContext context) {
@@ -35,14 +38,14 @@ class HeaderContainer extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const HeaderTitle(),
+                  HeaderTitle(snapshot: snapshot),
                   context.emptySizedHeightBoxLow3x,
-                  const AnimatedTexts(),
+                  AnimatedTexts(snapshot: snapshot),
                   context.emptySizedHeightBoxLow3x,
                   const ContactmeButton(),
                 ],
               ),
-              const HeaderImage(),
+              HeaderImage(snapshot: snapshot),
             ],
           ),
         ],
