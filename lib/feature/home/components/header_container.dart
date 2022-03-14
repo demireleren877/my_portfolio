@@ -32,21 +32,24 @@ class HeaderContainer extends StatelessWidget {
       color: Colors.black12.withOpacity(0.15),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  HeaderTitle(snapshot: snapshot),
-                  context.emptySizedHeightBoxLow3x,
-                  AnimatedTexts(snapshot: snapshot),
-                  context.emptySizedHeightBoxLow3x,
-                  const ContactmeButton(),
-                ],
-              ),
-              HeaderImage(snapshot: snapshot),
-            ],
+          SizedBox(
+            width: context.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    HeaderTitle(snapshot: snapshot),
+                    context.emptySizedHeightBoxLow3x,
+                    AnimatedTexts(snapshot: snapshot),
+                    context.emptySizedHeightBoxLow3x,
+                    const ContactmeButton(),
+                  ],
+                ),
+                HeaderImage(snapshot: snapshot),
+              ],
+            ),
           ),
         ],
       ),

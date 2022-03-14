@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../../core/colors/colors.dart';
 import '../../core/components/drawer/drawer_screen.dart';
 import '../../core/services/firebase_services.dart';
 import '../../core/services/responsive.dart';
@@ -53,23 +53,43 @@ class HomeScreen extends StatelessWidget {
                                 shrinkWrap: true,
                                 physics: const NeverScrollableScrollPhysics(),
                                 gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 3,
+                                    const SliverGridDelegateWithMaxCrossAxisExtent(
+                                  maxCrossAxisExtent: 500,
                                   crossAxisSpacing: 15,
                                   mainAxisSpacing: 15,
                                 ),
-                                itemCount: 9,
+                                itemCount:
+                                    snapshot.data!.docs[0]["projects"].length,
                                 itemBuilder: (BuildContext context, int index) {
-                                  return Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: AppColors.primary,
-                                      image: const DecorationImage(
-                                        image: NetworkImage(
-                                          'https://firebasestorage.googleapis.com/v0/b/erendemirelcom.appspot.com/o/portfolio_mock.jpeg?alt=media&token=5a36ddf4-d277-4dfa-ae59-39af0ab14231',
+                                  return Column(
+                                    children: [
+                                      TextButton.icon(
+                                        onPressed: () {
+                                          launch(snapshot.data!.docs[0]
+                                              ["projects"][index]["link"]);
+                                        },
+                                        icon: const Icon(Icons.launch),
+                                        label: Text(
+                                          snapshot.data!.docs[0]["projects"]
+                                              [index]["name"],
+                                          style: context.textTheme.headline6
+                                              ?.copyWith(
+                                            color: Colors.white,
+                                          ),
+                                          maxLines: 1,
                                         ),
                                       ),
-                                    ),
+                                      context.emptySizedHeightBoxLow,
+                                      ClipRRect(
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(10),
+                                        ),
+                                        child: Image.network(
+                                          snapshot.data!.docs[0]["projects"]
+                                              [index]["image"],
+                                        ),
+                                      ),
+                                    ],
                                   );
                                 },
                               ),
