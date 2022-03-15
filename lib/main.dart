@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portfolio/firebase_options.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'core/colors/colors.dart';
 import 'core/extensions/scroll_behavior.dart';
@@ -10,6 +11,7 @@ import 'feature/home/home_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(1920, 1080),
       builder: () => MaterialApp(
+        title: "Eren Demirel",
         scrollBehavior: MyCustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.dark,
