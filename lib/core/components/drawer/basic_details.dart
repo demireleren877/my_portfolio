@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:kartal/kartal.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../core/colors/colors.dart';
 
@@ -34,7 +35,7 @@ class BasicDetailsContainer extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.transparent,
             backgroundImage: NetworkImage(image),
-            radius: context.dynamicHeight(0.07),
+            radius: context.dynamicHeight(0.09),
           ),
           Text(
             name,
@@ -55,7 +56,10 @@ class BasicDetailsContainer extends StatelessWidget {
               minimumSize:
                   Size(context.dynamicWidth(0.12), context.dynamicHeight(0.06)),
             ),
-            onPressed: () {},
+            onPressed: () async {
+              await launch(
+                  "https://firebasestorage.googleapis.com/v0/b/erendemirelcom.appspot.com/o/cv%2FEren%20Demirel%20-%20Cv.pdf?alt=media&token=0d9071c4-63e2-42bb-9a25-3ba24d966981");
+            },
             label: Text(
               'Download CV',
               style: context.textTheme.headline6?.copyWith(color: Colors.white),
