@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
+import 'package:my_portfolio/core/services/responsive.dart';
 
 class ProjectImage extends StatefulWidget {
   const ProjectImage({
@@ -22,7 +23,9 @@ class _ProjectImageState extends State<ProjectImage> {
     return MouseRegion(
       onEnter: (event) {
         setState(() {
-          onHover = true;
+          if (!Responsive.isMobile(context)) {
+            onHover = true;
+          }
         });
       },
       onExit: (event) {
