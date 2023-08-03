@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(1920, 1080),
-      builder: () => MaterialApp(
+      builder: (a, b) => MaterialApp(
         title: "Eren Demirel",
         scrollBehavior: MyCustomScrollBehavior(),
         debugShowCheckedModeBanner: false,
@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-              primary: AppColors.primary,
-              onPrimary: AppColors.primary,
+              foregroundColor: AppColors.primary,
+              backgroundColor: AppColors.primary,
             ),
           ),
         ),

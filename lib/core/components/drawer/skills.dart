@@ -18,7 +18,7 @@ class SkillsList extends StatelessWidget {
       constraints: const BoxConstraints(
         minHeight: 120,
       ),
-      height: context.dynamicHeight(0.15),
+      height: context.dynamicHeight(0.18),
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
