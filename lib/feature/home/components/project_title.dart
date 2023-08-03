@@ -21,7 +21,7 @@ class ProjectTitle extends StatelessWidget {
       icon: const Icon(Icons.launch),
       label: Text(
         snapshot.data!.docs[0]["projects"][index]["name"],
-        style: context.textTheme.headline6?.copyWith(
+        style: context.textTheme.titleLarge?.copyWith(
           color: Colors.white,
         ),
         maxLines: 1,
