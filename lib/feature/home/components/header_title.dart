@@ -13,7 +13,7 @@ class HeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       "${snapshot.data!.docs[0]["title1"]} \n${snapshot.data!.docs[0]["title2"]}",
-      style: context.textTheme.headline3?.copyWith(
+      style: context.textTheme.displaySmall?.copyWith(
         color: Colors.white,
         fontWeight: FontWeight.bold,
       ),

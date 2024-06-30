@@ -51,7 +51,7 @@ class CvDrawer extends StatelessWidget {
                     padding: context.horizontalPaddingNormal,
                     child: Text(
                       'Skills:',
-                      style: context.textTheme.headline6,
+                      style: context.textTheme.titleLarge,
                     ),
                   ),
                   context.emptySizedHeightBoxLow3x,
@@ -65,7 +65,7 @@ class CvDrawer extends StatelessWidget {
                     padding: context.horizontalPaddingNormal,
                     child: Text(
                       'Coding:',
-                      style: context.textTheme.headline6,
+                      style: context.textTheme.titleLarge,
                     ),
                   ),
                   context.emptySizedHeightBoxLow,

@@ -20,11 +20,11 @@ class PersonalInfoText extends StatelessWidget {
         children: [
           Text(
             text,
-            style: context.textTheme.headline6,
+            style: context.textTheme.titleLarge,
           ),
           Text(
             answer,
-            style: context.textTheme.headline6
+            style: context.textTheme.titleLarge
                 ?.copyWith(color: AppColors.primaryDark),
           ),
         ],

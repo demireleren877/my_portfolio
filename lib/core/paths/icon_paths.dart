@@ -19,6 +19,10 @@ class SocialIcons {
     const SocialIcon(
       url: 'https://github.com/demireleren877',
       icon: FontAwesomeIcons.github,
+    ),
+    const SocialIcon(
+      url: 'https://firebasestorage.googleapis.com/v0/b/erendemirelcom.appspot.com/o/cv%2FEren%20Demirel.pdf?alt=media&token=17ced97e-45ab-4ea1-a94f-0cf9c1a268f2',
+      icon: FontAwesomeIcons.filePdf,
     )
   ];
 }

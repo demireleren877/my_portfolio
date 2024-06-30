@@ -17,7 +17,7 @@ class AnimatedTexts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
-      style: context.textTheme.headline6!.copyWith(
+      style: context.textTheme.titleLarge!.copyWith(
         color: Colors.white,
       ),
       child: SizedBox(

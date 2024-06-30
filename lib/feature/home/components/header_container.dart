@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import 'package:kartal/kartal.dart';
+import 'package:my_portfolio/core/components/drawer/personal_info_container.dart';
 
 import '../../../core/services/responsive.dart';
 import 'animated_texts.dart';

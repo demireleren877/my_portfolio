@@ -24,10 +24,10 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (Responsive.isDesktop(context))
-                  const Expanded(
-                    flex: 2,
-                    child: CvDrawer(),
-                  ),
+                  // const Expanded(
+                  //   flex: 2,
+                  //   child: CvDrawer(),
+                  // ),
                 StreamBuilder<QuerySnapshot>(
                   stream: FirebaseService.header.snapshots(),
                   builder: (context, snapshot) {
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                             context.emptySizedHeightBoxLow3x,
                             Text(
                               'My Last Projects',
-                              style: context.textTheme.headline4
+                              style: context.textTheme.headlineMedium
                                   ?.copyWith(color: Colors.white),
                             ),
                             LastProjectsGrid(snapshot: snapshot),

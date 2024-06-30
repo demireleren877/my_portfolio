@@ -31,11 +31,11 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                 children: [
                   Text(
                     codingSkills.keys.elementAt(index),
-                    style: context.textTheme.subtitle1,
+                    style: context.textTheme.titleMedium,
                   ),
                   Text(
                     '${(value * 100).toInt()}%',
-                    style: context.textTheme.subtitle1
+                    style: context.textTheme.titleMedium
                         ?.copyWith(color: AppColors.primaryDark),
                   ),
                 ],

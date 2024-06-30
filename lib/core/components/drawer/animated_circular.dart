@@ -47,7 +47,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                   ),
                   Text(
                     '${(value * 100).toInt()}%',
-                    style: context.textTheme.subtitle1,
+                    style: context.textTheme.titleMedium,
                   ),
                 ],
               ),
@@ -57,7 +57,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
         context.emptySizedHeightBoxLow3x,
         Text(
           skills.keys.elementAt(index),
-          style: context.textTheme.subtitle1,
+          style: context.textTheme.titleMedium,
         ),
       ],
     );

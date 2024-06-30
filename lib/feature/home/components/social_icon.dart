@@ -12,7 +12,8 @@ class SocialIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      splashRadius: 1,
+      splashRadius: 1 ,
+      splashColor: Colors.transparent,
       iconSize: 30.sp,
       onPressed: () {
         launch(url);
