@@ -24,10 +24,10 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (Responsive.isDesktop(context))
-                  const Expanded(
-                    flex: 2,
-                    child: CvDrawer(),
-                  ),
+                  // const Expanded(
+                  //   flex: 2,
+                  //   child: CvDrawer(),
+                  // ),
                 StreamBuilder<QuerySnapshot>(
                   stream: FirebaseService.header.snapshots(),
                   builder: (context, snapshot) {
